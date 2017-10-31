@@ -65,7 +65,7 @@ setup(
     ],
 
     # Structure
-    packages=find_packages(exclude=['contrib', 'docs', 'tests'], include=['djangocms_thumbnail_slider']),
+    packages=find_packages(where='.', exclude=['contrib', 'docs', 'tests'], include=('*',)),
 
     # List additional groups of dependencies here (e.g. development
     # dependencies). You can install these using the following syntax,
@@ -80,5 +80,6 @@ setup(
     # installed, specify them here.  If using Python 2.6 or less, then these
     # have to be included in MANIFEST.in as well.
     package_data={
+        'djangocms_thumbnail_slider': ['templates/*/*', 'static/*/*/*']
     },
 )
